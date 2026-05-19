@@ -1,0 +1,4 @@
+{
+  "nav": { "home": "Home", "about": "Chi sono", "projects": "Progetti", "contact": "Contatti" },
+  "home": { "title": "Ciao, sono [Nome]", "subtitle": "Sviluppatore Full Stack" }
+}
