@@ -1,32 +1,34 @@
-<section class="hero text-center py-5">
+<section class="hero">
 
-  <div class="container">
+  <div class="hero-content">
 
-    <img
-      src="assets/images/profile.jpg"
-      alt="profile"
-      class="profile-img mb-4"
-    />
+    <h1>👋 Ciao, sono {{ name }}</h1>
 
-    <h1 class="display-4 fw-bold">Ciao, sono [TUO NOME]</h1>
-
-    <p class="lead text-secondary">
+    <p class="subtitle">
       Full Stack Web Developer
     </p>
 
-    <p class="description mx-auto">
-      Sviluppo applicazioni web moderne con Angular, TypeScript,
-      Node.js e MySQL.
+    <p class="description">
+      Sono un Full Stack Web Developer con una
+      forte passione per la logica e la
+      programmazione. Il mio percorso in
+      Ingegneria Informatica all’Università degli
+      Studi di Palermo mi ha permesso di sviluppare
+      un approccio analitico e metodico alla
+      risoluzione dei problemi. Questa passione mi
+      ha portato a completare un percorso
+      intensivo in sviluppo web full-stack, creando
+      applicazioni moderne, responsive e scalabili.
+      Amo affrontare nuove sfide, imparare
+      continuamente e lavorare su progetti che
+      combinano creatività e tecnologia, portando
+      valore concreto sia al team che agli utenti
+      finali.
     </p>
 
-    <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
-      <a routerLink="/projects" class="btn btn-primary btn-lg">
-        I miei progetti
-      </a>
-
-      <a routerLink="/contact" class="btn btn-outline-light btn-lg">
-        Contattami
-      </a>
+    <div class="buttons">
+      <a routerLink="/projects" class="btn primary">Vedi progetti</a>
+      <a routerLink="/contact" class="btn secondary">Contattami</a>
     </div>
 
   </div>
@@ -34,42 +36,36 @@
 </section>
 
 
-<section class="skills py-5">
+<section class="section">
 
-  <div class="container">
+  <h2>💡 Skills</h2>
 
-    <h2 class="text-center mb-5">Competenze</h2>
-
-    <div class="row g-4">
-
-      <div class="col-md-4" *ngFor="let skill of skills">
-        <div class="skill-card text-center p-4">
-          <h4>{{ skill.name }}</h4>
-          <p>{{ skill.description }}</p>
-        </div>
-      </div>
-
+  <div class="skills">
+    <div class="skill" *ngFor="let skill of skills">
+      {{ skill }}
     </div>
-
   </div>
 
 </section>
 
 
-<section class="projects-preview py-5">
+<section class="section dark">
 
-  <div class="container text-center">
+  <h2>🚀 Progetti in evidenza</h2>
 
-    <h2 class="mb-4">Ultimi progetti</h2>
+  <div class="projects">
 
-    <p class="mb-4">
-      Dai un’occhiata ai miei lavori recenti.
-    </p>
+    <div class="project-card" *ngFor="let project of projectsPreview">
 
-    <a routerLink="/projects" class="btn btn-success">
-      Vai ai progetti
-    </a>
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.desc }}</p>
+
+    </div>
 
   </div>
+
+  <a routerLink="/projects" class="btn primary center">
+    Tutti i progetti
+  </a>
 
 </section>

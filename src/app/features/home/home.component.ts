@@ -11,19 +11,36 @@ import { RouterLink } from '@angular/router';
 })
 export class HomeComponent {
 
+  name = "Fabio Adelfio";
+
   skills = [
-    {
-      name: 'Frontend',
-      description: 'Angular, TypeScript, SCSS, Bootstrap'
-    },
-    {
-      name: 'Backend',
-      description: 'Node.js, Express'
-    },
-    {
-      name: 'Database',
-      description: 'MySQL, relational design'
-    }
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Git",
+    "GitHub",
+    "VS Code",
+    "PHP",
+    "Laravel",
+    "Bootstrap",
+    "JQuery",
+    "Database",
+    "Angular",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "MySQL",
+    "SCSS"
   ];
 
+  projectsPreview = [
+    {
+      title: "E-commerce Videogiochi",
+      desc: "Full stack app con carrello, sconti e checkout",
+    },
+    {
+      title: "Catalogo Film",
+      desc: "CRUD completo con Express e MySQL",
+    }
+  ];
 }
