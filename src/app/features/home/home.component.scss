@@ -54,6 +54,13 @@
   text-align: center;
 }
 
+.skills-section {
+  margin: 4rem;
+  border-radius: 20px;
+  background: blue;
+  color: white;
+}
+
 .section.dark {
   background: #0f172a;
   color: white;
@@ -68,7 +75,8 @@
 }
 
 .skill {
-  background: #e5e7eb;
+  background: lightblue;
+  color: black;
   padding: 8px 14px;
   border-radius: 20px;
 }
