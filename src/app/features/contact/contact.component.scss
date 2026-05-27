@@ -44,51 +44,101 @@
 }
 
 .contact-form {
+  width: 100%;
+  max-width: 500px;
+
+  margin: auto;
+
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.contact-form input,
-.contact-form textarea {
+/* INPUT GROUP (floating label) */
+.input-group {
+  position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px 12px;
+
   background: #1e293b;
   border: 1px solid transparent;
-
-  padding: 1rem;
-
   border-radius: 10px;
 
   color: white;
   font-size: 1rem;
+
+  outline: none;
 
   transition: 0.3s;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #3b82f6;
+/* LABEL FLOATING */
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+
+  color: #94a3b8;
+  font-size: 0.9rem;
+
+  pointer-events: none;
+
+  transition: 0.2s ease;
 }
 
-.contact-form button {
-  background: #3b82f6;
+/* effetto focus */
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* floating label animation */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+
+  font-size: 0.75rem;
+  color: #3b82f6;
+
+  background: #0f172a;
+  padding: 0 6px;
+}
+
+/* BUTTON MODERNO */
+button {
+  padding: 14px;
   border: none;
-
-  padding: 1rem;
-
   border-radius: 10px;
 
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
   color: white;
-  font-size: 1rem;
+
   font-weight: bold;
+  font-size: 1rem;
 
   cursor: pointer;
 
   transition: 0.3s;
 }
 
-.contact-form button:hover {
-  background: #2563eb;
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 @media screen and (max-width: 768px) {

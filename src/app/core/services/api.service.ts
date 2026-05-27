@@ -2,10 +2,9 @@ import { Injectable } from '@angular/core';
 import { Project } from '../../shared/models/project.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-
   projects: Project[] = [
     {
       id: 1,
@@ -13,8 +12,8 @@ export class ApiService {
       description: 'Full stack project',
       image: 'assets/images/game.jpg',
       technologies: ['Angular', 'Node', 'MySQL'],
-      github: ''
-    }
+      github: '',
+    },
   ];
 
   getProjects(): Project[] {

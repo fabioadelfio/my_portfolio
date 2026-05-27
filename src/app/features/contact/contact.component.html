@@ -31,26 +31,29 @@
       </div>
     </div>
 
-    <form class="contact-form" (ngSubmit)="submitForm()">
-      <input type="text" placeholder="Nome" [(ngModel)]="contactData.name" name="name" required />
+    <form class="contact-form" #form="ngForm" (ngSubmit)="sendEmail(form)">
+      <div class="input-group">
+        <input type="text" [(ngModel)]="contactData.name" name="name" required placeholder=" " />
+        <label>Nome</label>
+      </div>
 
-      <input
-        type="email"
-        placeholder="Email"
-        [(ngModel)]="contactData.email"
-        name="email"
-        required
-      />
+      <div class="input-group">
+        <input type="email" [(ngModel)]="contactData.email" name="email" required placeholder=" " />
+        <label>Email</label>
+      </div>
 
-      <textarea
-        rows="6"
-        placeholder="Messaggio"
-        [(ngModel)]="contactData.message"
-        name="message"
-        required
-      ></textarea>
+      <div class="input-group">
+        <textarea
+          rows="6"
+          [(ngModel)]="contactData.message"
+          name="message"
+          required
+          placeholder=" "
+        ></textarea>
+        <label>Messaggio</label>
+      </div>
 
-      <button type="submit">Invia Messaggio</button>
+      <button type="submit" [disabled]="form.invalid">Invia Messaggio</button>
     </form>
   </div>
 </section>
