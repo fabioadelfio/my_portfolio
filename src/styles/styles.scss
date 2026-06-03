@@ -1,0 +1,16 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* contenuto che “spinge” il footer */
+.content {
+  flex: 1;
+}
