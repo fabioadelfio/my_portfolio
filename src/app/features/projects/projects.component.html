@@ -1,1 +1,38 @@
-<p>projects works!</p>
+<section class="projects-page">
+  <div class="hero">
+    <h1>I Miei Progetti</h1>
+
+    <p>
+      Una selezione di progetti che mettono in mostra le mie competenze come Full Stack Web
+      Developer.
+    </p>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects">
+      <div class="image-container">
+        <img [src]="project.image" [alt]="project.title" />
+      </div>
+
+      <div class="content">
+        <h3>{{ project.title }}</h3>
+
+        <p>{{ project.description }}</p>
+
+        <div class="tech-stack">
+          <span *ngFor="let tech of project.technologies">
+            {{ tech }}
+          </span>
+        </div>
+
+        <div class="buttons">
+          <a [href]="project.github" target="_blank" class="btn-secondary"> Repository GitHub </a>
+
+          <a [routerLink]="['/projects', project.slug]" class="btn-primary">
+            Visualizza Progetto
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

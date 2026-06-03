@@ -1,0 +1,26 @@
+<div class="project-detail" *ngIf="project; else notFound">
+  <h1>{{ project.title }}</h1>
+
+  <p class="description">
+    {{ project.description }}
+  </p>
+
+  <div class="tech">
+    <span *ngFor="let tech of project.technologies">
+      {{ tech }}
+    </span>
+  </div>
+
+  <div class="gallery">
+    <img *ngFor="let img of project.images" [src]="img" [alt]="project.title" />
+  </div>
+
+  <a [href]="project.github" target="_blank" class="btn"> Vedi Repository GitHub </a>
+</div>
+
+<ng-template #notFound>
+  <div class="not-found">
+    <h2>Progetto non trovato</h2>
+    <p>Controlla il link o torna alla lista progetti.</p>
+  </div>
+</ng-template>

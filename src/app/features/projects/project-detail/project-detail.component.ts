@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 interface Project {
   slug: string;
@@ -13,22 +13,23 @@ interface Project {
 }
 
 @Component({
-  selector: 'app-projects',
+  selector: 'app-project-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink],
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
+  imports: [CommonModule],
+  templateUrl: './project-detail.component.html',
+  styleUrls: ['./project-detail.component.scss'],
 })
-export class ProjectsComponent {
+export class ProjectDetailComponent {
+  project: Project | undefined;
+
   projects: Project[] = [
     {
       slug: 'boolstop',
       title: 'BoolStop',
       description: 'E-commerce completo per videogiochi con carrello, wishlist e checkout.',
-      image: 'assets/projects/boolstop/cover.png',
+      image: 'assets/projects/boolstop/cover.jpg',
       technologies: ['React', 'Node.js', 'MySQL'],
       github: '#',
-
       images: [
         'assets/projects/boolstop/home.jpg',
         'assets/projects/boolstop/catalog.jpg',
@@ -39,12 +40,10 @@ export class ProjectsComponent {
     {
       slug: 'boolflix',
       title: 'Boolflix',
-      description: 'Catalogo film e serie TV con ricerca tramite API esterne.',
+      description: 'Catalogo film e serie TV con API TMDB.',
       image: 'assets/projects/boolflix/cover.jpg',
       technologies: ['React', 'API TMDB'],
-
       github: '#',
-
       images: [
         'assets/projects/boolflix/home.jpg',
         'assets/projects/boolflix/search.jpg',
@@ -52,4 +51,10 @@ export class ProjectsComponent {
       ],
     },
   ];
+
+  constructor(private route: ActivatedRoute) {
+    const slug = this.route.snapshot.paramMap.get('slug');
+
+    this.project = this.projects.find((p) => p.slug === slug);
+  }
 }
