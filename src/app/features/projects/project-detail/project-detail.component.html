@@ -12,10 +12,18 @@
   </div>
 
   <div class="gallery">
-    <img *ngFor="let img of project.images" [src]="img" [alt]="project.title" />
+    <img
+      *ngFor="let img of project.images"
+      [src]="img"
+      [alt]="project.title"
+      (click)="openImage(img)"
+    />
   </div>
+</div>
 
-  <a [href]="project.github" target="_blank" class="btn"> Vedi Repository GitHub </a>
+<!-- LIGHTBOX -->
+<div class="lightbox" *ngIf="selectedImage" (click)="closeImage()">
+  <img [src]="selectedImage" />
 </div>
 
 <ng-template #notFound>

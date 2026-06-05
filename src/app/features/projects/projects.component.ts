@@ -8,7 +8,7 @@ interface Project {
   description: string;
   image: string;
   technologies: string[];
-  github: string;
+  github?: string;
   images: string[];
 }
 
@@ -24,31 +24,91 @@ export class ProjectsComponent {
     {
       slug: 'boolstop',
       title: 'BoolStop',
-      description: 'E-commerce completo per videogiochi con carrello, wishlist e checkout.',
+      description:
+        'E-commerce full stack per la vendita di videogiochi, con gestione completa del carrello, wishlist e sistema di checkout con gestione degli ordini.',
       image: 'assets/projects/boolstop/cover.png',
-      technologies: ['React', 'Node.js', 'MySQL'],
-      github: '#',
+      technologies: ['JavaScript', 'HTML', 'CSS', 'React', 'Node.js', 'MySQL'],
 
       images: [
-        'assets/projects/boolstop/home.jpg',
-        'assets/projects/boolstop/catalog.jpg',
-        'assets/projects/boolstop/cart.jpg',
-        'assets/projects/boolstop/checkout.jpg',
+        'assets/projects/boolstop/cover.png',
+        'assets/projects/boolstop/2.png',
+        'assets/projects/boolstop/3.png',
+        'assets/projects/boolstop/4.png',
+        'assets/projects/boolstop/5.png',
+        'assets/projects/boolstop/6.png',
+        'assets/projects/boolstop/7.png',
+        'assets/projects/boolstop/8.png',
+        'assets/projects/boolstop/9.png',
+        'assets/projects/boolstop/10.png',
+        'assets/projects/boolstop/11.png',
+        'assets/projects/boolstop/12.png',
+        'assets/projects/boolstop/13.png',
+        'assets/projects/boolstop/14.png',
+        'assets/projects/boolstop/15.png',
+        'assets/projects/boolstop/16.png',
+        'assets/projects/boolstop/17.png',
+        'assets/projects/boolstop/18.png',
+        'assets/projects/boolstop/19.png',
+        'assets/projects/boolstop/20.png',
+        'assets/projects/boolstop/21.png',
+        'assets/projects/boolstop/22.png',
+        'assets/projects/boolstop/23.png',
+        'assets/projects/boolstop/24.png',
       ],
     },
     {
-      slug: 'boolflix',
-      title: 'Boolflix',
-      description: 'Catalogo film e serie TV con ricerca tramite API esterne.',
-      image: 'assets/projects/boolflix/cover.jpg',
-      technologies: ['React', 'API TMDB'],
-
-      github: '#',
+      slug: 'cinemax_admin',
+      title: 'Cinemax (Admin Panel)',
+      description:
+        'Admin panel per la gestione di una piattaforma di streaming, con funzionalità CRUD su film e serie TV e integrazione di API esterne per ricerca e sincronizzazione dei contenuti.',
+      image: 'assets/projects/cinemax-admin/cover.png',
+      technologies: ['PHP', 'Laravel', 'Bootstrap', 'MySQL'],
 
       images: [
-        'assets/projects/boolflix/home.jpg',
-        'assets/projects/boolflix/search.jpg',
-        'assets/projects/boolflix/details.jpg',
+        'assets/projects/cinemax-admin/cover.png',
+        'assets/projects/cinemax-admin/2.png',
+        'assets/projects/cinemax-admin/3.png',
+        'assets/projects/cinemax-admin/4.png',
+        'assets/projects/cinemax-admin/5.png',
+        'assets/projects/cinemax-admin/6.png',
+        'assets/projects/cinemax-admin/7.png',
+        'assets/projects/cinemax-admin/8.png',
+        'assets/projects/cinemax-admin/9.png',
+        'assets/projects/cinemax-admin/10.png',
+        'assets/projects/cinemax-admin/11.png',
+        'assets/projects/cinemax-admin/12.png',
+        'assets/projects/cinemax-admin/13.png',
+        'assets/projects/cinemax-admin/14.png',
+        'assets/projects/cinemax-admin/15.png',
+        'assets/projects/cinemax-admin/16.png',
+        'assets/projects/cinemax-admin/17.png',
+      ],
+    },
+    {
+      slug: 'cinemax_user',
+      title: 'Cinemax (User Interface)',
+      description:
+        'User interface per la ricerca e consultazione di film e serie TV con integrazione API e visualizzazione dettagli avanzati.',
+      image: 'assets/projects/cinemax-user/cover.png',
+      technologies: ['React', 'Bootstrap', 'MySQL', 'CSS', 'JavaScript', 'HTML'],
+
+      images: [
+        'assets/projects/cinemax-user/cover.png',
+        'assets/projects/cinemax-user/2.png',
+        'assets/projects/cinemax-user/3.png',
+        'assets/projects/cinemax-user/4.png',
+        'assets/projects/cinemax-user/5.png',
+        'assets/projects/cinemax-user/6.png',
+        'assets/projects/cinemax-user/7.png',
+        'assets/projects/cinemax-user/8.png',
+        'assets/projects/cinemax-user/9.png',
+        'assets/projects/cinemax-user/10.png',
+        'assets/projects/cinemax-user/11.png',
+        'assets/projects/cinemax-user/12.png',
+        'assets/projects/cinemax-user/13.png',
+        'assets/projects/cinemax-user/14.png',
+        'assets/projects/cinemax-user/15.png',
+        'assets/projects/cinemax-user/16.png',
       ],
     },
   ];
